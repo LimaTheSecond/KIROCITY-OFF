@@ -1,0 +1,18 @@
+local CLASS = player.RegClass("civilian_protocol")
+
+function CLASS.Off(self)
+    if CLIENT then return end
+end
+
+function CLASS.On(self)
+    if CLIENT then return end
+    ApplyAppearance(self, nil, nil, nil, true)
+end
+
+CLASS.CanUseDefaultPhrase = true
+CLASS.CanEmitRNDSound = true
+CLASS.CanUseGestures = true
+
+function CLASS.Guilt(self, Victim)
+    if CLIENT then return end
+end
